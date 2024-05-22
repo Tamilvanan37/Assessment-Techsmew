@@ -32,23 +32,7 @@ function Curd() {
     setList(newlist);
   }
 
-  // function handleSubmit(event) {
-  //   event.preventDefault();
-  //   const name = event.target.elements.name.value;
-  //   const price = event.target.elements.price.value;
-  //   const email = event.target.elements.email.value;
-  //   const subject = event.target.elements.subject.value;
-  //   const grade = event.target.elements.grade.value;
 
-  //   const newlist = lists.map((li) =>
-  //     li.id === updateState
-  //       ? { ...li, name, Price: price, email, subject, grade }
-  //       : li
-  //   );
-
-  //   setList(newlist);
-  //   setupdateState(-1);
-  // }
   function handleSubmit(updatedItem) {
     const newlist = lists.map((item) =>
       item.id === updatedItem.id ? updatedItem : item
@@ -200,11 +184,11 @@ function AddList({ setList }) {
       return [...prevList, newlist];
     });
 
-    nameRef.current.value = ""; // Clear input value
-    priceRef.current.value = ""; // Clear input value
-    emailRef.current.value = ""; // Clear input value
-    subjectRef.current.value = ""; // Clear input value
-    gradeRef.current.value = ""; // Clear input value
+    nameRef.current.value = ""; 
+    priceRef.current.value = ""; 
+    emailRef.current.value = ""; 
+    subjectRef.current.value = "";
+    gradeRef.current.value = "";
   }
 
   return (
@@ -215,31 +199,31 @@ function AddList({ setList }) {
         type="text"
         name="name"
         placeholder="enter your name"
-        ref={nameRef} // Assign ref to the input element
+        ref={nameRef} 
       />
       <input
         type="text"
         name="Price"
         placeholder="enter your price"
-        ref={priceRef} // Assign ref to the input element
+        ref={priceRef} 
       />
       <input
         type="text"
         name="email"
         placeholder="enter your email"
-        ref={emailRef} // Assign ref to the input element
+        ref={emailRef} 
       />
       <input
         type="text"
         name="subject"
         placeholder="enter your subject"
-        ref={subjectRef} // Assign ref to the input element
+        ref={subjectRef} 
       />
       <input
         type="text"
         name="grade"
         placeholder="enter your grade"
-        ref={gradeRef} // Assign ref to the input element
+        ref={gradeRef} 
       />
       <button type="submit" className="button-submit">submit</button>
     </form>
